@@ -1,4 +1,381 @@
+@font-face {
+    font-family: 'Oswald';
+    src: url(../fonts/Oswald-Regular.ttf);
+}
+
 * {
     margin: 0;
     padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Navbar */
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    margin-bottom: 50px;
+    background-color: black;
+    font-family: 'Oswald';
+}
+
+.top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    list-style-type: none;
+    background-color: black;
+}
+
+.fb {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 500ms ease;
+    margin: 0 10px;
+    font-size: 150%;
+    color: blue;
+}
+
+.tw {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 500ms ease;
+    margin: 0 10px;
+    font-size: 150%;
+    color: deepskyblue;
+}
+
+.insta {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 0 10px;
+    font-size: 150%;
+    background:-webkit-linear-gradient(top left, blue, purple, red, orange, yellow);
+    background-clip:text;
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.res {
+    display: block;
+    text-decoration: none;
+}
+
+.reseaux {
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blank {
+    width: 25%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.reseaux {
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+}
+
+.logo a  {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.user {
+    width: 15%;
+}
+
+.users {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 500ms ease;
+    margin: 0 10px;
+}
+
+.userss {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 500ms ease;
+    margin: 0 10px;
+}
+
+.log {
+    width: 15%;
+}
+
+.respon {
+    display: flex;
+    flex-direction: row;
+    width: 75%;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-family: 'Oswald';
+    list-style-type: none;
+    background-color: black;
+    font-size: 110%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+
+.menu {
+    width: 70%;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.categorie {
+    display: block;
+    text-align: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 15px 15px;
+    cursor: pointer;
+    border-bottom: 3px white solid;
+    transition: 500ms ease;
+    font-size: 110%;
+}
+
+.sous-cat {
+    font-size: 90%;
+    overflow: hidden;
+}
+
+.sous-sous-cat {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 80%;
+    padding: 0;
+    margin: 0;
+}
+
+.sous-sous-cat_redirect {
+    padding: 0;
+}
+
+.dd-mnu{
+    background-color: black;
+    display: none;
+    position: fixed;
+    top: 5.35rem;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+  .dd-mnu ul{
+    position: relative;
+  }
+  .dropdown-menu{
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .dropdown-menu li{
+    display: block;
+    text-align: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 5px 10px;
+    margin: 10px 15px;
+    cursor: pointer;
+  }
+
+
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-bar {
+    height: 20px;
+    width: 70%;
+}
+
+.search-button {
+    margin: 0 20px 0 5px;
+}
+
+.account {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+}
+
+.fav {
+    border-radius: 50%;
+    padding: 3px 7px;
+    margin: 0 5px;
+    transition: 500ms ease;
+}
+
+.shop {
+    border-radius: 50%;
+    padding: 3px 7px;
+    margin: 0 5px;
+    transition: 500ms ease;
+    display: flex;
+}
+
+.acc {
+    border-radius: 50%;
+    padding: 3px 7px;
+    margin: 0 5px;
+    transition: 500ms ease;
+}
+
+.burger {
+    display: none;
+    color: white;
+}
+
+.users:hover {
+    text-decoration: underline;
+}
+.categorie:hover {
+    border-bottom: 3px black solid;
+    background-color: rgb(30, 30, 30);
+}
+.hov:hover {
+    text-decoration: underline;
+    color: rgb(100, 100, 100);
+}
+
+@media screen and (min-width: 1024px) {
+    
+    .fav:hover {
+        background-color: white;
+    }
+    .shop:hover {
+        background-color: white;
+    }
+    .acc:hover {
+        background-color: white;
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    .fb {
+        font-size: 100%;
+    }
+    .tw {
+        font-size: 100%;
+    }
+    .insta {
+        font-size: 100%;
+    }
+    .user {
+        width: 15%;
+        font-size: 70%;
+    }
+    .burger {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        grid-column-start: 3;
+        margin-right: 50px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        cursor: pointer;
+        font-size: 150%;
+    }
+    nav {
+        font-size: 70%;
+    }
+    .active {
+        position: absolute;
+        display: flex !important;
+        z-index: 10;
+        top: 100%;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(4px);
+        width: 100%;
+        height: 300px;
+        margin: 0;
+        padding: 0;
+    }
+    .respon{
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    .menu {
+        width: 100%;
+    }
+    .account {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .dd-mnu {
+        top: 3.3rem;
+        background-color: rgba(255, 255, 255, 0);
+    }
+    .logo {
+        width: 40%;
+    }
+    .logo a {
+        width: 20%;
+    }
 }
