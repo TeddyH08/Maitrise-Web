@@ -18,6 +18,10 @@ a {
     color: white;
 }
 
+h3 {
+    margin-bottom: 20px;
+}
+
 /* Navbar */
 header {
     display: flex;
@@ -27,7 +31,6 @@ header {
     position: sticky;
     top: 0;
     z-index: 10;
-    margin-bottom: 50px;
     background-color: black;
     font-family: 'Oswald';
 }
@@ -364,7 +367,13 @@ footer {
     background-color: black;
     color: white;
     font-family: 'Oswald';
-    font-size: 150%;
+}
+
+.sepa {
+    width: 95%;
+    height: 3px;
+    background-color: rgb(50, 50, 50);
+    border-radius: 50%;
 }
 
 .reseaux_container {
@@ -373,6 +382,8 @@ footer {
     justify-content: center;
     align-items: center;
     width: 60%;
+    font-size: 150%;
+    margin-bottom: 10px;
 }
 
 .reseaux {
@@ -413,4 +424,32 @@ i {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.contact_footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 80%;
+    font-size: 120%;
+    margin: 15px 0;
+}
+
+.maitrise_fcontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.contact_fcontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.copy {
+    margin: 10px 0;
 }
