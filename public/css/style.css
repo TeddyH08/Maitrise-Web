@@ -46,6 +46,11 @@ h4 {
     right: 2rem;
     z-index: 100;
     display: none;
+    transition: all 0.3s ease;
+}
+
+.go_top:hover {
+    background-color: rgb(100, 100, 100);
 }
 
 /* Navbar */
@@ -180,25 +185,16 @@ li {
     border-bottom: 3px white solid;
     transition: 500ms ease;
     font-size: 110%;
+    color: white;
+}
+
+.categorie i {
+    font-size: 80%;
 }
 
 .sous-cat {
     font-size: 90%;
     overflow: hidden;
-}
-
-.sous-sous-cat {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    font-size: 80%;
-    padding: 0;
-    margin: 0;
-}
-
-.sous-sous-cat_redirect {
-    padding: 0;
 }
 
 .dd-mnu{
@@ -542,7 +538,7 @@ footer {
 
 .sepa {
     width: 95%;
-    height: 3px;
+    height: 1px;
     background-color: rgb(50, 50, 50);
     border-radius: 50%;
 }
