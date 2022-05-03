@@ -3,14 +3,21 @@
     src: url(../fonts/Oswald-Regular.ttf);
 }
 
+@font-face {
+    font-family: 'RadioCanada';
+    src: url(../fonts/RadioCanada-Regular.ttf);
+}
+
 * {
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 body {
     margin: 0;
     padding: 0;
+    font-family: 'RadioCanada';
 }
 
 a {
@@ -22,6 +29,25 @@ h3 {
     margin-bottom: 20px;
 }
 
+h4 {
+    margin: 10px 0;
+}
+
+.title {
+    margin: 50px 0;
+    font-size: 250%;
+}
+
+.go_top {
+    position: fixed;
+    background-color: black;
+    padding: 10px;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 100;
+    display: none;
+}
+
 /* Navbar */
 header {
     display: flex;
@@ -30,7 +56,7 @@ header {
     align-items: stretch;
     position: sticky;
     top: 0;
-    z-index: 10;
+    z-index: 20;
     background-color: black;
     font-family: 'Oswald';
 }
@@ -354,6 +380,151 @@ li {
     justify-content: center;
     align-items: center;
     width: 100%;
+}
+
+.top_home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.titre {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 200%;
+    color: white;
+}
+
+.animate__animated.animate__fadeIn {
+    --animate-duration: 3s;
+  }
+
+.img_bg {
+    width: 100%;
+}
+
+.container_pole {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.pole_developpement {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    box-shadow: 0 0 0.5em black;
+    color: black;
+    border-radius: 5px;
+    font-size: 150%;
+    transition: all 200ms ease;
+}
+
+.img_dev {
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+}
+
+.pole_referencement {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    box-shadow: 0 0 0.5em black;
+    color: black;
+    border-radius: 5px;
+    font-size: 150%;
+    transition: all 200ms ease;
+}
+
+.img_ref {
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+}
+
+.pole_graphique {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    box-shadow: 0 0 0.5em black;
+    color: black;
+    border-radius: 5px;
+    font-size: 150%;
+    transition: all 200ms ease;
+}
+
+.img_gra {
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+}
+
+.text_pole {
+    margin: 15px;
+}
+
+.pole_developpement:hover {
+    z-index: 10;
+    transform: scale(1.1);
+    box-shadow: 0 0 1em black;
+}
+
+.pole_referencement:hover {
+    z-index: 10;
+    transform: scale(1.1);
+    box-shadow: 0 0 1em black;
+}
+
+.pole_graphique:hover {
+    z-index: 10;
+    transform: scale(1.1);
+    box-shadow: 0 0 1em black;
+}
+
+.container_proj {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.proj {
+    width: 15%;
+    transition: all 200ms ease;
+}
+
+.proj:hover {
+    z-index: 10;
+    transform: scale(1.1);
+}
+
+.img_proj {
+    width: 100%;
+}
+
+.more {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(0, 0, 0);
+    margin-bottom: 50px;
+    font-size: 120%;
 }
 
 /* Footer */

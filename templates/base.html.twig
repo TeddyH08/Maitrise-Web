@@ -10,18 +10,15 @@
         {% block stylesheets %}
         {% endblock %}
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-        <link 
-            rel="stylesheet" 
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" 
-            integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" 4
-            crossorigin="anonymous" 
-            referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
         {% block javascripts %}
         {% endblock %}
     </head>
     <body>
         {% block navbar %}{% endblock %}
+        
             <header>
                 <div class="top">
                     <div class="admin">
@@ -87,8 +84,13 @@
                     </div>
                 </nav>
             </header>
+
         {% block body %}{% endblock %}
+
+        <a href="#" class="go_top"><i class="fa-solid fa-angle-up"></i></a>
+
         {% block footer %}{% endblock %}
+
         <footer>
             <div class="reseaux_container">
                 <h3>Retrouvez-nous aussi sur :</h3>
@@ -144,5 +146,6 @@
 
 <script src="{{ asset('js/navbar_responsive.js') }}"></script>
 <script src="{{ asset('js/navbar_drop.js') }}"></script>
+<script src="{{ asset('js/back_to_top.js') }}"></script>
     </body>
 </html>
