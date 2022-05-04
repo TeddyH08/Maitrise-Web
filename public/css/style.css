@@ -34,8 +34,12 @@ h4 {
 }
 
 .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     margin: 50px 0;
-    font-size: 250%;
+    font-size: 220%;
 }
 
 .go_top {
@@ -169,10 +173,6 @@ ul {
     justify-content: center;
     align-items: center;
     text-decoration: none;
-}
-
-li {
-    margin: 0 15px;
 }
 
 .categorie {
@@ -518,6 +518,85 @@ li {
 
 .more:hover {
     transform: scale(1.05);
+}
+
+/* Page de contact */
+
+.container_contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    font-size: 150%;
+    margin-top: 10px;
+    margin-bottom: 70px;
+    box-shadow: 0 0 0.1em black;
+    padding: 10px;
+}
+
+.form_contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.client {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+}
+
+.name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 45%;
+}
+
+.form_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 95%;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input {
+    margin-bottom: 10px;
+    width: 100%;
+    font-size: 90%;
+}
+
+.name input {
+    width: 100%;
+}
+
+textarea {
+    margin-bottom: 10px;
+    width: 100%;
+    height: 150px;
+    font-size: 100%;
+}
+
+.envoi {
+    margin-top: 10px;
+    width: 20%;
+    align-self: center;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 5px 0;
+    cursor: pointer;
 }
 
 /* Footer */

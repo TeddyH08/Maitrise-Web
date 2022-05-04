@@ -34,7 +34,7 @@
 
                 <nav class="navbar">
                     <div class="logo">
-                            <a href="index.php"><img src="{{ asset('img/logo_transpa.png') }}" class="log">Maitrise Web</a>
+                            <a href="{{ path('home') }}"><img src="{{ asset('img/logo_transpa.png') }}" class="log">Maitrise Web</a>
                     </div>
 
                     <div id="nav" class="respon">
@@ -46,19 +46,19 @@
                                     <div class="dd-mnu">
                                         <ul class="dropdown-menu">
                                             <li class="sous-cat animate__animated animate__fadeIn">
-                                                <a href="categorie.php?genres=1&categories=1" class="hov">Site vitrine</a>
+                                                <a href="{{ path('presentation') }}" class="hov">Pôle Développement</a>
                                             </li>
 
                                             <div class="separator animate__animated animate__fadeIn"></div>
 
                                             <li class="sous-cat animate__animated animate__fadeIn">
-                                                <a href="categorie.php?genres=1&categories=2" class="hov">Site E-commerce</a>
+                                                <a href="{{ path('presentation') }}" class="hov">Pôle Référencement</a>
                                             </li>
 
                                             <div class="separator animate__animated animate__fadeIn"></div>
 
                                             <li class="sous-cat animate__animated animate__fadeIn">
-                                                <a href="categorie.php?genres=1&categories=3" class="hov">Application interne</a>
+                                                <a href="{{ path('presentation') }}" class="hov">Pôle Graphique</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -69,7 +69,11 @@
                                 </li>
 
                                 <li class="categorie dropdown">
-                                    <a href="categorie.php?genres=3">Contact</a>
+                                    <a href="categorie.php?genres=2">Conseils</a>
+                                </li>
+
+                                <li class="categorie dropdown">
+                                    <a href="{{ path('contact') }}">Contact</a>
                                 </li>
                             </ul>
                         </div>
