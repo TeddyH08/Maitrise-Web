@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <div class="top_home">
+            <img src="{{ asset('img/bg_small.jpg') }}" class="img_bg">
+            <div class="titre animate__animated animate__fadeIn">
+                <h1>Maitrise Web</h1>
+                <h3>Page de conseils</h3>
+            </div>
+        </div>
+
+        <div class="title">
+            <h3>Nos conseils pour votre site</h3>
+            <h4>Retrouvez ici tout nos conseils pour que votre site soit le plus optimal possible.</h4>
+        </div>
+        
+        <div class="sepa"></div>
+
+        <div class="sepa"></div>
+
+        <div class="redirect">
+            <h5>Envie de nous parler de vos projets ?</h5>
+            <a href="{{ path('contact') }}">Contatez-nous</a>
+        </div>
+    </div>
+{% endblock %}
