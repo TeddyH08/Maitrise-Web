@@ -15,19 +15,19 @@
         </div>
 
         <div class="container_pole">
-            <a href="#" class="pole_developpement">
+            <a href="{{ path('presentation') }}" class="pole_developpement">
                 <img src="{{ asset('img/dev.jpg') }}" class="img_dev">
                 <h4>Pôle Développement</h4>
                 <p class="text_pole">Notre technique au coeur du process de notre pôle développement.</p>
             </a>
 
-            <a href="#" class="pole_referencement">
+            <a href="{{ path('presentation') }}" class="pole_referencement">
                 <img src="{{ asset('img/dev.jpg') }}" class="img_ref">
                 <h4>Pôle Référencement</h4>
                 <p class="text_pole">Positionnement, visibilité & suivi sont essentiels à votre dévellopements.</p>
             </a>
 
-            <a href="#" class="pole_graphique">
+            <a href="{{ path('presentation') }}" class="pole_graphique">
                 <img src="{{ asset('img/dev.jpg') }}" class="img_gra">
                 <h4>Pôle Graphique</h4>
                 <p class="text_pole">Créativité, graphisme & esthétique sont les maîtres mots de notre équipe graphique.</p>
@@ -64,6 +64,13 @@
 
         <div class="more">
             <a href="">En voir plus ></a>
+        </div>
+
+        <div class="sepa"></div>
+
+        <div class="redirect">
+            <h5>Envie de nous parler de vos projets ?</h5>
+            <a href="{{ path('contact') }}">Contatez-nous</a>
         </div>
     </div>
 {% endblock %}

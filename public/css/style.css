@@ -33,6 +33,12 @@ h4 {
     margin: 10px 0;
 }
 
+h5 {
+    text-align: center;
+    font-size: 175%;
+    margin-bottom: 20px;
+}
+
 .title {
     display: flex;
     flex-direction: column;
@@ -55,6 +61,19 @@ h4 {
 
 .go_top:hover {
     background-color: rgb(100, 100, 100);
+}
+
+.redirect {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+}
+
+.redirect a {
+    background-color: black;
+    padding: 10px 15px;
 }
 
 /* Navbar */
@@ -518,6 +537,87 @@ ul {
 
 .more:hover {
     transform: scale(1.05);
+}
+
+/* Page de présentation  */
+
+.title_pres {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 50px 0;
+}
+
+.title_pres h3 {
+    text-align: center !important;
+    margin: 10px 0;
+    font-size: 220%;
+}
+
+.title_pres p {
+    text-align: center !important;
+    margin: 10px 0;
+    font-size: 150%;
+}
+
+.container_dev {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.container_ref {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.container_graph {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.container_img {
+    width: 50%;
+}
+
+.container_txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    padding: 20px;
+}
+
+.container_txt p {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 125%;
+}
+
+.dev_img {
+    width: 100%;
+}
+
+.ref_img {
+    width: 100%;
+}
+
+.graph_img {
+    width: 100%;
 }
 
 /* Page de contact */
