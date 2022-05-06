@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <div class="top_home">
+            <img src="{{ asset('img/bg_small.jpg') }}" class="img_bg">
+            <div class="titre animate__animated animate__fadeIn">
+                <h1>Maitrise Web</h1>
+                <h3>Page de connexion</h3>
+            </div>
+        </div>
+
+        <div class="title">
+            <h3>Connectez-vous pour accéder au  panel admin</h3>
+        </div>
+
+        <div class="sepa"></div>
+
+        <div class="container_connexion">
+            <form action="" method="post" class="form_contact">
+                <div class="form_content">
+                    <label for="identifiant">Identifiant</label>
+                    <input type="text" name="identifiant" placeholder="Identifiant" required>
+                </div>
+
+                <div class="form_content">
+                    <label for="mdp">Mot de passe</label>
+                    <input type="password" name="mdp" placeholder="Mot de passe" required>
+                </div>
+
+                <input type="submit" value="Connexion" class="envoie">
+            </form>
+        </div>
+
+        <div class="sepa"></div>
+
+        <div class="redirect">
+            <h5>Envie de nous parler de vos projets ?</h5>
+            <a href="{{ path('contact') }}">Contatez-nous</a>
+        </div>
+    </div>
+{% endblock %}

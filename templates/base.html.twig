@@ -21,18 +21,6 @@
         {% block navbar %}{% endblock %}
         
             <header>
-                <div class="top">
-                    <div class="admin">
-                        <a href="">Admin</a>
-                    </div>
-                        
-                    <div class="blank">
-                    </div>
-
-                    <div class="user">
-                    </div>
-                </div>
-
                 <nav class="navbar">
                     <div class="logo">
                             <a href="{{ path('home') }}"><img src="{{ asset('img/logo_transpa.png') }}" class="log">Maitrise Web</a>
@@ -142,7 +130,7 @@
             <div class="sepa"></div>
 
             <div class="copy">
-                <p>© 2022 Copyright: Maitrise Web | Tous droits Reservés | Mentions légales | Politique de confidentialité | CGV</p>
+                <p>© 2022 Copyright: <a href="{{ path('connexion') }}">Maitrise Web</a> | Tous droits Reservés | Mentions légales | Politique de confidentialité | CGV</p>
             </div>
         </footer>
 
