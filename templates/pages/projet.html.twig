@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <div class="top_home">
+            <img src="{{ asset('img/bg_small.jpg') }}" class="img_bg">
+            <div class="titre animate__animated animate__fadeIn">
+                <h1>Maitrise Web</h1>
+                <h3>Page de progression des projets</h3>
+            </div>
+        </div>
+        
+        <div class="title">
+            <h3>Retrouvez ici l'avancement de votre projet</h3>
+        </div>
+
+        <div class="sepa"></div>
+
+        <div class="recherche">
+            <h3>Entrez le nom de votre projet :</h3>
+            <form action="" method="post" class="form_recherche">
+                <input type="text" placeholder="Nom du projet" class="input_recherche">
+                <input type="submit" value="Rechercher" class="envoi_recherche">
+            </form>
+        </div>
+
+        <div>
+            <h2>Veuillez écrire le nom de votre projet ci-dessus pour retrouver les informations.</h2>
+        </div>
+
+        <div class="sepa"></div>
+
+        <div class="redirect">
+            <h5>Envie de nous parler de vos projets ?</h5>
+            <a href="{{ path('contact') }}">Contatez-nous</a>
+        </div>
+    </div>
+{% endblock %}

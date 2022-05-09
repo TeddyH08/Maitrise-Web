@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <div class="top_home">
+            <img src="{{ asset('img/bg_small.jpg') }}" class="img_bg">
+            <div class="titre animate__animated animate__fadeIn">
+                <h1>Maitrise Web</h1>
+                <h3>Page d'administration</h3>
+            </div>
+        </div>
+
+        <div class="title">
+            <h3>Gestion du panel administrateur</h3>
+        </div>
+
+        <div class="sepa"></div>
+
+        <div class="datatable_pojet">
+            <p>Datatable des projets finis</p>
+        </div>
+
+        <div class="sepa"></div>
+
+        <div class="datatable_pojet">
+            <p>Datatable des projets en cours de réalisations</p>
+        </div>
+
+        <div class="sepa"></div>
+
+        <div class="datatable_pojet">
+            <p>Liste des conseils</p>
+        </div>
+
+        <div class="sepa"></div>
+
+        <div class="redirect">
+            <h5>Envie de nous parler de vos projets ?</h5>
+            <a href="{{ path('contact') }}">Contatez-nous</a>
+        </div>
+    </div>
+{% endblock %}
