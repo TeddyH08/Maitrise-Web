@@ -36,50 +36,16 @@
         </div>
 
         <div class="container_proj">
-            <div class="card_proj">
-                <a href="" class="ti">
-                    Nom du projet
-                </a>
-                <a href="#" class="proj">
-                    <img src="{{ asset('img/proj.jpg') }}" class="img_proj">
-                </a>
-            </div>
-
-            <div class="card_proj">
-                <a href="" class="ti">
-                    Nom du projet
-                </a>
-                <a href="#" class="proj">
-                    <img src="{{ asset('img/proj.jpg') }}" class="img_proj">
-                </a>
-            </div>
-
-            <div class="card_proj">
-                <a href="" class="ti">
-                    Nom du projet
-                </a>
-                <a href="#" class="proj">
-                    <img src="{{ asset('img/proj.jpg') }}" class="img_proj">
-                </a>
-            </div>
-
-            <div class="card_proj">
-                <a href="" class="ti">
-                    Nom du projet
-                </a>
-                <a href="#" class="proj">
-                    <img src="{{ asset('img/proj.jpg') }}" class="img_proj">
-                </a>
-            </div>
-
-            <div class="card_proj">
-                <a href="" class="ti">
-                    Nom du projet
-                </a>
-                <a href="#" class="proj">
-                    <img src="{{ asset('img/proj.jpg') }}" class="img_proj">
-                </a>
-            </div>
+            {% for projet in projets %}
+                <div class="card_proj">
+                    <a href="{{ projet.linkprojet }}" target="_blank" class="ti">
+                        {{ projet.nameprojet }}
+                    </a>
+                    <a href="#" class="proj">
+                        <img src="{{ asset('img/' ~ projet.imageprojet) }}" class="img_proj">
+                    </a>
+                </div>
+            {% endfor %}
         </div>
 
         <div class="sepa"></div>
@@ -103,86 +69,16 @@
         </div>
 
         <div class="container_proj">
-            <div class="card_proj">
-                <a href="" class="ti">
-                    Nom du projet
-                </a>
-                <a href="#" class="proj">
-                    <img src="{{ asset('img/proj.jpg') }}" class="img_proj">
-                </a>
-            </div>
-
-            <div class="card_proj">
-                <a href="" class="ti">
-                    Nom du projet
-                </a>
-                <a href="#" class="proj">
-                    <img src="{{ asset('img/proj.jpg') }}" class="img_proj">
-                </a>
-            </div>
-
-            <div class="card_proj">
-                <a href="" class="ti">
-                    Nom du projet
-                </a>
-                <a href="#" class="proj">
-                    <img src="{{ asset('img/proj.jpg') }}" class="img_proj">
-                </a>
-            </div>
-
-            <div class="card_proj">
-                <a href="" class="ti">
-                    Nom du projet
-                </a>
-                <a href="#" class="proj">
-                    <img src="{{ asset('img/proj.jpg') }}" class="img_proj">
-                </a>
-            </div>
-
-            <div class="card_proj">
-                <a href="" class="ti">
-                    Nom du projet
-                </a>
-                <a href="#" class="proj">
-                    <img src="{{ asset('img/proj.jpg') }}" class="img_proj">
-                </a>
-            </div>
-
-            <div class="card_proj">
-                <a href="" class="ti">
-                    Nom du projet
-                </a>
-                <a href="#" class="proj">
-                    <img src="{{ asset('img/proj.jpg') }}" class="img_proj">
-                </a>
-            </div>
-
-            <div class="card_proj">
-                <a href="" class="ti">
-                    Nom du projet
-                </a>
-                <a href="#" class="proj">
-                    <img src="{{ asset('img/proj.jpg') }}" class="img_proj">
-                </a>
-            </div>
-
-            <div class="card_proj">
-                <a href="" class="ti">
-                    Nom du projet
-                </a>
-                <a href="#" class="proj">
-                    <img src="{{ asset('img/proj.jpg') }}" class="img_proj">
-                </a>
-            </div>
-
-            <div class="card_proj">
-                <a href="" class="ti">
-                    Nom du projet
-                </a>
-                <a href="#" class="proj">
-                    <img src="{{ asset('img/proj.jpg') }}" class="img_proj">
-                </a>
-            </div> 
+            {% for projet in projets %}
+                <div class="card_proj">
+                    <a href="{{ projet.linkprojet }}" target="_blank" class="ti">
+                        {{ projet.nameprojet }}
+                    </a>
+                    <a href="#" class="proj">
+                        <img src="{{ asset('img/' ~ projet.imageprojet) }}" class="img_proj">
+                    </a>
+                </div>
+            {% endfor %}
         </div>
 
         <div class="sepa"></div>

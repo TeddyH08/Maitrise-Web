@@ -18,50 +18,12 @@
         <div class="sepa"></div>
 
         <div class="container_conseils">
-            <a href="#" class="card_conseil">
-                <img src="{{ asset('img/conseil.jpg') }}" class="img_conseil">
-                <h4>Nom du conseil</h4>
-            </a>
-
-            <a href="#" class="card_conseil">
-                <img src="{{ asset('img/conseil.jpg') }}" class="img_conseil">
-                <h4>Nom du conseil</h4>
-            </a>
-
-            <a href="#" class="card_conseil">
-                <img src="{{ asset('img/conseil.jpg') }}" class="img_conseil">
-                <h4>Nom du conseil</h4>
-            </a>
-
-            <a href="#" class="card_conseil">
-                <img src="{{ asset('img/conseil.jpg') }}" class="img_conseil">
-                <h4>Nom du conseil</h4>
-            </a>
-
-            <a href="#" class="card_conseil">
-                <img src="{{ asset('img/conseil.jpg') }}" class="img_conseil">
-                <h4>Nom du conseil</h4>
-            </a>
-
-            <a href="#" class="card_conseil">
-                <img src="{{ asset('img/conseil.jpg') }}" class="img_conseil">
-                <h4>Nom du conseil</h4>
-            </a>
-
-            <a href="#" class="card_conseil">
-                <img src="{{ asset('img/conseil.jpg') }}" class="img_conseil">
-                <h4>Nom du conseil</h4>
-            </a>
-
-            <a href="#" class="card_conseil">
-                <img src="{{ asset('img/conseil.jpg') }}" class="img_conseil">
-                <h4>Nom du conseil</h4>
-            </a>
-
-            <a href="#" class="card_conseil">
-                <img src="{{ asset('img/conseil.jpg') }}" class="img_conseil">
-                <h4>Nom du conseil</h4>
-            </a>
+            {% for article in articles %}
+                <a href="{{ article.linkarticles }}" target="_blank" class="card_conseil">
+                    <img src="{{ asset('img/' ~ article.imagearticles) }}" class="img_conseil">
+                    <h4>{{ article.namearticles }}</h4>
+                </a>
+            {% endfor %}
         </div>
 
         <div class="sepa"></div>
