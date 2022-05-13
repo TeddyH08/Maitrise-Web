@@ -12,46 +12,13 @@
 
         <div class="title">
             <h3>Nos projets & créations</h3>
-            <h4>Retrouvez ici nos projets finis et en cours de réalisations.</h4>
+            <h4>Retrouvez ici nos projets finis.</h4>
         </div>
 
         <div class="sepa"></div>
 
         <div class="title">
-            <h3>Nos projets finis</h3>
-        </div>
-
-        <div class="container_categorie">
-            <div class="cate">
-                <p>Tout</p>
-            </div>
-
-            <div class="cate">
-                <p>Site vitrine</p>
-            </div>
-
-            <div class="cate">
-                <p>Site e-commerce</p>
-            </div>
-        </div>
-
-        <div class="container_proj">
-            {% for projet in projets %}
-                <div class="card_proj">
-                    <a href="{{ projet.linkprojet }}" target="_blank" class="ti">
-                        {{ projet.nameprojet }}
-                    </a>
-                    <a href="#" class="proj">
-                        <img src="{{ asset('img/' ~ projet.imageprojet) }}" class="img_proj">
-                    </a>
-                </div>
-            {% endfor %}
-        </div>
-
-        <div class="sepa"></div>
-
-        <div class="title">
-            <h3>Nos projets en cours</h3>
+            <h3>Nos différents projets réalisés</h3>
         </div>
 
         <div class="container_categorie">

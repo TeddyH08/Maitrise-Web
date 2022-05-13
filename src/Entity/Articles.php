@@ -6,6 +6,7 @@ use App\Repository\ArticlesRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Cocur\Slugify\Slugify;
 
 #[ORM\Entity(repositoryClass: ArticlesRepository::class)]
 class Articles
@@ -68,6 +69,10 @@ class Articles
         $this->name_articles = $name_articles;
 
         return $this;
+    }
+
+    public function getSlug(): string {
+        return (new Slugify())->slugify($this->name_articles);
     }
 
     public function getImageArticles(): ?string

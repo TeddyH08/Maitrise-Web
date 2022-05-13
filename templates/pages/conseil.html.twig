@@ -19,7 +19,7 @@
 
         <div class="container_conseils">
             {% for article in articles %}
-                <a href="{{ article.linkarticles }}" target="_blank" class="card_conseil">
+                <a href="{{ path('conseils.show', {id: article.id, slug: article.slug}) }}" class="card_conseil">
                     <img src="{{ asset('img/' ~ article.imagearticles) }}" class="img_conseil">
                     <h4>{{ article.namearticles }}</h4>
                 </a>

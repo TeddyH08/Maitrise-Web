@@ -30,4 +30,15 @@
                 "articles" => $articles
             ]);
         }
+
+        /**
+         * @Route("/conseils/{slug}-{id}", name="conseils.show", requirements={"slug": "[a-z0-9\-]*"})
+         * @return Response
+         */
+        public function show($slug, $id): Response {
+            $articles = $this->repository->find($id);
+            return $this->render('pages/show.html.twig', [
+                "articles" => $articles
+            ]);
+        }
     }

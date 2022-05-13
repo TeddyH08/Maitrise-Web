@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <div class="top_home">
+            <img src="{{ asset('img/' ~ articles.imagearticles) }}" class="img_bg">
+            <div class="fond"></div>
+            <div class="titre animate__animated animate__fadeIn">
+                <h1>Maitrise Web</h1>
+                <h3>{{ articles.namearticles }}</h3>
+            </div>
+        </div>
+
+        <div class="title">
+            <h3>{{ articles.titlep1articles }}</h3>
+        </div>
+
+        <div class="text_conseil">
+            <p>{{ articles.textp1articles }}</p>
+        </div>
+
+        <div class="sepa"></div>
+
+        <div class="title">
+            <h3>{{ articles.titlep2articles }}</h3>
+        </div>
+
+        <div class="text_conseil">
+            <p>{{ articles.textp2articles }}</p>
+        </div>
+
+        <div class="sepa"></div>
+
+        <div class="title">
+            <h3>{{ articles.titlep3articles }}</h3>
+        </div>
+
+        <div class="text_conseil">
+            <p>{{ articles.textp3articles }}</p>
+        </div>
+
+        <div class="sepa"></div>
+
+        <div class="redirect">
+            <h5>Envie de nous parler de vos projets ?</h5>
+            <a href="{{ path('contact') }}">Contatez-nous</a>
+        </div>
+    </div>
+{% endblock %}

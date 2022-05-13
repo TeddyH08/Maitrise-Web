@@ -49,20 +49,20 @@
         <div class="sepa"></div>
 
         <div class="title">
-            <h3>Nos dernières réalisations</h3>
+            <h3>Quelques unes de nos réalisations</h3>
         </div>
 
         <div class="container_proj">
-            {% for projet in projets %}
-                <div class="card_proj">
-                    <a href="{{ projet.linkprojet }}" target="_blank" class="ti">
-                        {{ projet.nameprojet }}
-                    </a>
-                    <a href="#" class="proj">
-                        <img src="{{ asset('img/' ~ projet.imageprojet) }}" class="img_proj">
-                    </a>
-                </div>
-            {% endfor %}
+                {% for projet in projets|slice(0, 4) %}
+                    <div class="card_proj">
+                        <a href="{{ projet.linkprojet }}" target="_blank" class="ti">
+                            {{ projet.nameprojet }}
+                        </a>
+                        <a href="#" class="proj">
+                            <img src="{{ asset('img/' ~ projet.imageprojet) }}" class="img_proj">
+                        </a>
+                    </div>
+                {% endfor %}
         </div>
 
         <div class="more">
