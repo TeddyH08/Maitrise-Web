@@ -1,0 +1,15 @@
+<div class="animate__animated animate__fadeIn" id="container_proj">
+    {% for projet in projets %}
+        {% if projet.typeprojet.id == 2 %}
+            <div class="card_proj">
+                <a href="{{ projet.linkprojet }}" target="_blank" class="ti">
+                    {{ projet.nameprojet }}
+                </a>
+
+                <a href="#" class="proj">
+                    <img src="{{ asset('img/' ~ projet.imageprojet) }}" class="img_proj">
+                </a>
+            </div>    
+        {% endif %}
+    {% endfor %}
+</div>

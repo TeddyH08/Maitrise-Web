@@ -22,30 +22,21 @@
         </div>
 
         <div class="container_categorie">
-            <div class="cate">
+            <div class="cate" onclick="GoToPage('tout')" >
                 <p>Tout</p>
             </div>
 
-            <div class="cate">
+            <div class="cate" onclick="GoToPage('vitrine')">
                 <p>Site vitrine</p>
             </div>
 
-            <div class="cate">
+            <div class="cate" onclick="GoToPage('ecommerce')">
                 <p>Site e-commerce</p>
             </div>
         </div>
 
-        <div class="container_proj">
-            {% for projet in projets %}
-                <div class="card_proj">
-                    <a href="{{ projet.linkprojet }}" target="_blank" class="ti">
-                        {{ projet.nameprojet }}
-                    </a>
-                    <a href="#" class="proj">
-                        <img src="{{ asset('img/' ~ projet.imageprojet) }}" class="img_proj">
-                    </a>
-                </div>
-            {% endfor %}
+        <div id="container_proj">
+            {% include "pages/if/if_tout.html.twig" %}
         </div>
 
         <div class="sepa"></div>
@@ -55,4 +46,8 @@
             <a href="{{ path('contact') }}">Contatez-nous</a>
         </div>
     </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('js/filtre_projets.js') }}"></script>
 {% endblock %}

@@ -361,7 +361,7 @@ ul {
     margin: 15px;
 }
 
-.container_proj {
+#container_proj {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
