@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <div class="top_home">
+            <img src="{{ asset('img/bg_small.jpg') }}" class="img_bg">
+            <div class="titre animate__animated animate__fadeIn">
+                <h1>Maitrise Web</h1>
+                <h3>Page d'ajout d'un article</h3>
+            </div>
+        </div>
+
+        <div class="inscription">
+            {{ form(form) }}
+        </div>
+
+        <div class="btn-retour">
+            <a href="{{ path('admin') }}" class="retour">Retour</a>
+        </div>
+    </div>
+{% endblock %}

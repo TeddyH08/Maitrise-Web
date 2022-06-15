@@ -7,6 +7,7 @@
     use Symfony\Component\HttpFoundation\Response;
     use Symfony\Component\Routing\Annotation\Route;
 
+
     class ConseilController extends AbstractController {
 
         /**
@@ -17,7 +18,6 @@
         public function __construct(ArticlesRepository $repository){
             $this->repository = $repository;
         }
-
 
         /**
          * @Route("/conseils", name="conseils")

@@ -14,29 +14,169 @@
             <h3>Gestion du panel administrateur</h3>
         </div>
 
+        {% for message in app.flashes('success') %}
+            <div class="success">
+                {{ message }}
+            </div>
+        {% endfor %}
+
         <div class="sepa"></div>
 
-        <div class="datatable_pojet">
-            <p>Datatable des projets finis</p>
+        <div class="datatable_projet">
+            <div class="blank"></div>
+            <h4>Liste des différents utilisateurs</h4>
+            <a href="{{ path('ajout_users') }}" class='ajout'>Ajouter un utilisateur</a>
+        </div>
+
+        <div class="article">
+            <h3 class="title_users">Partie Clients :</h3>
+            <div class="users_content">
+                {% for utilisateur in utilisateurs %}
+                    {% if utilisateur.rolesusers.nameroles == 'Client' %}
+                        <div class="users_card">
+                            <img src="{{ asset('img/' ~ utilisateur.imgprofilusers) }}" class="users_img">
+
+                            <h4>{{ utilisateur.nameusers }} {{ utilisateur.firstnameusers }}</h4>
+
+                            <div class="infos_users">
+                                <p>{{ utilisateur.mailusers }}</p>
+                                <p>{{ utilisateur.rolesusers.nameroles }}</p>
+                            </div>
+
+                            <div class="modif_users">
+                                <a href="" class="plus">Voir plus <i class="fa-solid fa-arrow-right-long arrow"></i></a>
+
+                                <div class="modif">
+                                    <a href="" class="pen"><i class="fa-solid fa-pen"></i></a>
+                                    <a href="" class="trash"><i class="fa-solid fa-trash"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+
+            <h3 class="title_users">Partie Administrateurs :</h3>
+            <div class="users_content">
+                {% for utilisateur in utilisateurs %}
+                    {% if utilisateur.rolesusers.nameroles == 'Admin' %}
+                        <div class="users_card">
+                            <img src="{{ asset('img/' ~ utilisateur.imgprofilusers) }}" class="users_img">
+
+                            <h4>{{ utilisateur.nameusers }} {{ utilisateur.firstnameusers }}</h4>
+
+                            <div class="infos_users">
+                                <p>{{ utilisateur.mailusers }}</p>
+                                <p>{{ utilisateur.rolesusers.nameroles }}</p>
+                            </div>
+
+                            <div class="modif_users">
+                                <a href="" class="plus">Voir plus <i class="fa-solid fa-arrow-right-long arrow"></i></a>
+
+                                <div class="modif">
+                                    <a href="" class="pen"><i class="fa-solid fa-pen"></i></a>
+                                    <a href="" class="trash"><i class="fa-solid fa-trash"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+        
+        <div class="sepa"></div>
+
+        <div class="datatable_projet">
+            <h4>Liste des projets finis</h4>
+        </div>
+
+        <div class="article">
+            <div class="users_content">
+                {% for projet in projets %}
+                    {% if projet.etapeprojet.id == 9 %}
+                        <div class="projets_card">
+                            <img src="{{ asset('img/' ~ projet.imageprojet) }}" class="projet_img">
+                            <h4>{{ projet.nameprojet }}</h4>
+
+                            <div class="infos_users">
+                                <p>Lien : <a href="{{ projet.linkprojet }}" target="_blank" class="link_proj">{{ projet.linkprojet }}</a></p>
+                                <p></p>
+                            </div>
+
+                            <div class="modif_users">
+                                <a href="" class="plus">Voir plus <i class="fa-solid fa-arrow-right-long arrow"></i></a>
+
+                                <div class="modif">
+                                    <a href="" class="pen"><i class="fa-solid fa-pen"></i></a>
+                                    <a href="" class="trash"><i class="fa-solid fa-trash"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
         </div>
 
         <div class="sepa"></div>
 
-        <div class="datatable_pojet">
-            <p>Datatable des projets en cours de réalisations</p>
+        <div class="datatable_projet">
+            <div class="blank"></div>
+            <h4>Liste des projets en cours de réalisations</h4>
+            <a href="{{ path('ajout_projets') }}" class='ajout'>Ajouter un projet</a>
+        </div>
+
+        <div class="article">
+            <div class="users_content">
+                {% for projet in projets %}
+                    {% if projet.etapeprojet.id != 9 %}
+                        <div class="projets_card">
+                            <img src="{{ asset('img/' ~ projet.imageprojet) }}" class="projet_img">
+                            <h4>{{ projet.nameprojet }}</h4>
+
+                            <div class="infos_users">
+                                <p>Lien : <a href="{{ projet.linkprojet }}" target="_blank" class="link_proj">{{ projet.linkprojet }}</a></p>
+                            </div>
+
+                            <div class="modif_users">
+                                <a href="" class="plus">Voir plus <i class="fa-solid fa-arrow-right-long arrow"></i></a>
+
+                                <div class="modif">
+                                    <a href="" class="pen"><i class="fa-solid fa-pen"></i></a>
+                                    <a href="" class="trash"><i class="fa-solid fa-trash"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
         </div>
 
         <div class="sepa"></div>
 
-        <div class="datatable_pojet">
-            <p>Liste des conseils</p>
+        <div class="datatable_projet">
+            <div class="blank"></div>
+            <h4>Liste des conseils</h4>
+            <a href="{{ path('ajout_articles') }}" class='ajout'>Ajouter un article</a>
         </div>
 
-        <div class="sepa"></div>
+        <div class="article">
+            <div class="users_content">
+                {% for article in articles %}
+                    <div class="projets_card">
+                        <img src="{{ asset('img/' ~ article.imagearticles) }}" class="projet_img">
+                        <h4>{{ article.namearticles }}</h4>
 
-        <div class="redirect">
-            <h5>Envie de nous parler de vos projets ?</h5>
-            <a href="{{ path('contact') }}">Contatez-nous</a>
+                        <div class="modif_users">
+                                <a href="" class="plus">Voir plus <i class="fa-solid fa-arrow-right-long arrow"></i></a>
+
+                                <div class="modif">
+                                    <a href="" class="pen"><i class="fa-solid fa-pen"></i></a>
+                                    <a href="" class="trash"><i class="fa-solid fa-trash"></i></a>
+                                </div>
+                            </div>
+                    </div>
+                {% endfor %}
+            </div>
         </div>
     </div>
 {% endblock %}

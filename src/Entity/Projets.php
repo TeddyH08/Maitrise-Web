@@ -36,6 +36,9 @@ class Projets
     #[ORM\ManyToMany(targetEntity: Users::class, mappedBy: 'projet')]
     private $users;
 
+    #[ORM\Column(type: 'string', length: 255, nullable: true)]
+    private $titlep1_articles;
+
     public function __construct()
     {
         $this->fichiers = new ArrayCollection();
@@ -160,6 +163,18 @@ class Projets
         if ($this->users->removeElement($user)) {
             $user->removeProjet($this);
         }
+
+        return $this;
+    }
+
+    public function getTitlep1Articles(): ?string
+    {
+        return $this->titlep1_articles;
+    }
+
+    public function setTitlep1Articles(?string $titlep1_articles): self
+    {
+        $this->titlep1_articles = $titlep1_articles;
 
         return $this;
     }

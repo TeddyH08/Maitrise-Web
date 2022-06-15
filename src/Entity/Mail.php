@@ -2,23 +2,36 @@
 
 namespace App\Entity;
 
+use App\Repository\MailRepository;
+use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
-class Contact {
+#[ORM\Entity(repositoryClass: MailRepository::class)]
+class Mail
+{
+    #[ORM\Id]
+    #[ORM\GeneratedValue]
+    #[ORM\Column(type: 'integer')]
+    private $id;
+
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+        /**
+     * @var string|null
+     * @Assert\NotBlank()
+     * @Assert\Length(min=2, max=100)
+     */
+    private $nom;
 
     /**
      * @var string|null
      * @Assert\NotBlank()
      * @Assert\Length(min=2, max=100)
      */
-    private $name;
-
-    /**
-     * @var string|null
-     * @Assert\NotBlank()
-     * @Assert\Length(min=2, max=100)
-     */
-    private $firstname;
+    private $prenom;
 
     /**
      * @var string|null
@@ -27,7 +40,7 @@ class Contact {
      *  pattern="/[0-9]{10}/"
      * )
      */
-    private $phone;
+    private $telephone;
 
     /**
      * @var string|null
@@ -41,7 +54,7 @@ class Contact {
      * @Assert\NotBlank()
      * @Assert\Length(min=2, max=100)
      */
-    private $subject;
+    private $sujet;
 
     /**
      * @var string|null
@@ -50,56 +63,56 @@ class Contact {
      */
     private $message;
 
-    /**
-     * @var Property|null
-     */
-    private $property;
+    // /**
+    //  * @var Property|null
+    //  */
+    // private $property;
 
     /**
      * @return null|string
      */
-    public function getName(): ?string {
-        return $this->name;
+    public function getNom(): ?string {
+        return $this->nom;
     }
 
     /**
-     * @param null|string $name
-     * @return Contact
+     * @param null|string $nom
+     * @return Mail
      */
-    public function setName(?string $name): Contact {
-        $this->name = $name;
+    public function setNom(?string $nom): Mail {
+        $this->nom = $nom;
         return $this;
     }
 
     /**
      * @return null|string
      */
-    public function getFirstname(): ?string {
-        return $this->firstname;
+    public function getPrenom(): ?string {
+        return $this->prenom;
     }
 
     /**
-     * @param null|string $firstname
-     * @return Contact
+     * @param null|string $prenom
+     * @return Mail
      */
-    public function setFirstname(?string $firstname): Contact {
-        $this->firstname = $firstname;
+    public function setPrenom(?string $prenom): Mail {
+        $this->prenom = $prenom;
         return $this;
     }
 
     /**
      * @return null|string
      */
-    public function getPhone(): ?string {
-        return $this->phone;
+    public function getTelephone(): ?string {
+        return $this->telephone;
     }
 
     /**
-     * @param null|string $phone
-     * @return Contact
+     * @param null|string $telephone
+     * @return Mail
      */
-    public function setPhone(?string $phone): Contact {
-        $this->phone = $phone;
+    public function setTelephone(?string $telephone): Mail {
+        $this->telephone = $telephone;
         return $this;
     }
 
@@ -112,9 +125,9 @@ class Contact {
 
     /**
      * @param null|string $mail
-     * @return Contact
+     * @return Mail
      */
-    public function setMail(?string $mail): Contact {
+    public function setMail(?string $mail): Mail {
         $this->mail = $mail;
         return $this;
     }
@@ -122,16 +135,16 @@ class Contact {
     /**
      * @return null|string
      */
-    public function getSubject(): ?string {
-        return $this->subject;
+    public function getSujet(): ?string {
+        return $this->sujet;
     }
 
     /**
-     * @param null|string $subject
-     * @return Contact
+     * @param null|string $sujet
+     * @return Mail
      */
-    public function setSubject(?string $subject): Contact {
-        $this->subject = $subject;
+    public function setSujet(?string $sujet): Mail {
+        $this->sujet = $sujet;
         return $this;
     }
 
@@ -144,26 +157,10 @@ class Contact {
 
     /**
      * @param null|string $message
-     * @return Contact
+     * @return Mail
      */
-    public function setMessage(?string $message): Contact {
+    public function setMessage(?string $message): Mail {
         $this->message = $message;
-        return $this;
-    }
-
-    /**
-     * @return null|string
-     */
-    public function getProperty(): ?string {
-        return $this->property;
-    }
-
-    /**
-     * @param null|string $property
-     * @return Contact
-     */
-    public function setProperty(?string $property): Contact {
-        $this->property = $property;
         return $this;
     }
 }
